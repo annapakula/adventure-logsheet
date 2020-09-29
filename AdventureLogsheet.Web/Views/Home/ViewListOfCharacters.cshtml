@@ -1,10 +1,10 @@
-﻿@model IEnumerable<AdventureLogsheet.Web.Models.Hero>
+﻿@model IEnumerable<AdventureLogsheet.Web.Models.Character>
 
 @{
     ViewData["Title"] = "ViewListOfHeroes";
 }
 
-<h1>ViewListOfHeroes</h1>
+<h1>List of your Heroes</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -20,6 +20,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Race)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Classes)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Level)
@@ -38,6 +41,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Race)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Classes)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Level)

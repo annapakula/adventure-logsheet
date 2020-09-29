@@ -26,11 +26,11 @@ namespace AdventureLogsheet.Web.Controllers
             return View();
         }
 
-        [Route("Heroes/All")]
-        public IActionResult ViewListOfHeroes()
+        [Route("Characters")]
+        public IActionResult ViewListOfCharacters()
         {
-            List<Hero> heroes = new List<Hero>();
-            heroes.Add(new Hero()
+            List<Character> characters = new List<Character>();
+            characters.Add(new Character()
             {
                 Id = 1,
                 Name = "Nix",
@@ -38,7 +38,7 @@ namespace AdventureLogsheet.Web.Controllers
                 Classes = "Fighter",
                 Level = 5,
             });
-            heroes.Add(new Hero()
+            characters.Add(new Character()
             {
                 Id = 2,
                 Name = "Sadha",
@@ -46,7 +46,7 @@ namespace AdventureLogsheet.Web.Controllers
                 Classes = "Barbarian",
                 Level = 2,
             });
-            heroes.Add(new Hero()
+            characters.Add(new Character()
             {
                 Id = 3,
                 Name = "Anka Tivish",
@@ -54,7 +54,7 @@ namespace AdventureLogsheet.Web.Controllers
                 Classes = "Rogue",
                 Level = 5,
             });
-            return View(heroes);
+            return View(characters);
         }
         
         public IActionResult Privacy()
