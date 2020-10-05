@@ -13,7 +13,7 @@ namespace AdventureLogsheet.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        //Konstruktor kontrollera, przyjmuje element który jest związany z dependency injection (wstrzykiwaniem zależności), jest to związane z wstrzykiwaniem loggera
+        //Konstruktor kontrolera; przyjmuje element który jest związany z dependency injection (wstrzykiwaniem zależności), jest to związane z wstrzykiwaniem loggera
         //czyli mechanizmu do logowania informacji na temat błędów, interakcji z użytkownikiem itd.
         public HomeController(ILogger<HomeController> logger)
         {
@@ -35,24 +35,32 @@ namespace AdventureLogsheet.Web.Controllers
                 Id = 1,
                 Name = "Nix",
                 Race = "Gnome",
-                Classes = "Fighter",
-                Level = 5,
+                //Classes = "Fighter",
+                //Level = 5,
+                //DCINumber = "",
             });
             characters.Add(new Character()
             {
                 Id = 2,
                 Name = "Sadha",
                 Race = "Dragonborn",
-                Classes = "Barbarian",
-                Level = 2,
+                //Classes = "Barbarian",
+                //Level = 2,
+                //DCINumber = "",
             });
             characters.Add(new Character()
             {
                 Id = 3,
                 Name = "Anka Tivish",
                 Race = "Mountain Dwarf",
-                Classes = "Rogue",
-                Level = 5,
+                CharacterClasses = new List<CharacterClass>()
+                {
+                    new CharacterClass() { CharClass = "Rogue", Level = 5 }, 
+                    new CharacterClass() { CharClass = "Warlock", Level = 1 }
+                },
+                //Classes = "Rogue",
+                //Level = 5,
+               // DCINumber = "",
             });
             return View(characters);
         }

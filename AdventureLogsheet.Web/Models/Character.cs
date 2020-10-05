@@ -14,6 +14,8 @@ namespace AdventureLogsheet.Web.Models
         public string Race { get; set; }
         public string Classes { get; set; }
         public int Level { get; set; }
+        public List<CharacterClass> CharacterClasses { get; set; }
+        //public string DCINumber { get; set; }
 
     }
 }
