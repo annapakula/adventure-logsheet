@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AdventureLogsheet.Domain.Interface;
 using AdventureLogsheet.Domain.Model;
 
 namespace AdventureLogsheet.Infrastructure.Repositories
 {
-    class AdventureRepository
+    public class AdventureRepository : IAdventureRepository
     {
         private readonly Context _context;
 

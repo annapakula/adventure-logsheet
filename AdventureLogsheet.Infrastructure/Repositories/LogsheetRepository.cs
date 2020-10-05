@@ -6,7 +6,7 @@ using AdventureLogsheet.Domain.Model;
 
 namespace AdventureLogsheet.Infrastructure.Repositories
 {
-    class LogsheetRepository
+    public class LogsheetRepository
     {
         private readonly Context _context;
 
