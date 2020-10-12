@@ -11,7 +11,7 @@ namespace AdventureLogsheet.Domain.Model
         public int StartingRenown { get; set; }
         public int EarnedRenown { get; set; }
         public int TotalRenown { get; set; }
-        public int AdventureId { get; set; }
-        public virtual Adventure Adventure { get; set; }
+        public int AdventureRef { get; set; }
+        public Adventure Adventure { get; set; }
     }
 }

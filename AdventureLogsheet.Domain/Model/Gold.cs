@@ -11,7 +11,7 @@ namespace AdventureLogsheet.Domain.Model
         public int StartingGold { get; set; }
         public int EarnedGold { get; set; }
         public int TotalGold { get; set; }
-        public int AdventureId { get; set; }
-        public virtual Adventure Adventure { get; set; }
+        public int AdventureRef { get; set; }
+        public Adventure Adventure { get; set; }
     }
 }

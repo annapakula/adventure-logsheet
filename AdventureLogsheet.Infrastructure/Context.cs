@@ -33,20 +33,20 @@ namespace AdventureLogsheet.Infrastructure
                 .HasMany(a => a.Adventures).WithOne(b => b.Character)
                 .HasForeignKey(e => e.CharacterId);
             builder.Entity<Adventure>()
-                .HasMany(a => a.AdventureCheckpoints).WithOne(b => b.Adventure)
-                .HasForeignKey(e => e.AdventureId);
+                .HasOne(a => a.AdventureCheckpoints).WithOne(b => b.Adventure)
+                .HasForeignKey<AdventureCheckpoints>(e => e.AdventureRef);
             builder.Entity<Adventure>()
-                .HasMany(a => a.Gold).WithOne(b => b.Adventure)
-                .HasForeignKey(e => e.AdventureId);
+                .HasOne(a => a.Gold).WithOne(b => b.Adventure)
+                .HasForeignKey<AdventureCheckpoints>(e => e.AdventureRef);
             builder.Entity<Adventure>()
-                .HasMany(a => a.Downtime).WithOne(b => b.Adventure)
-                .HasForeignKey(e => e.AdventureId);
+                .HasOne(a => a.Downtime).WithOne(b => b.Adventure)
+                .HasForeignKey<AdventureCheckpoints>(e => e.AdventureRef);
             builder.Entity<Adventure>()
-                .HasMany(a => a.Renown).WithOne(b => b.Adventure)
-                .HasForeignKey(e => e.AdventureId);
+                .HasOne(a => a.Renown).WithOne(b => b.Adventure)
+                .HasForeignKey<AdventureCheckpoints>(e => e.AdventureRef);
             builder.Entity<Adventure>()
-                .HasMany(a => a.TreasureCheckpoints).WithOne(b => b.Adventure)
-                .HasForeignKey(e => e.AdventureId);
+                .HasOne(a => a.TreasureCheckpoints).WithOne(b => b.Adventure)
+                .HasForeignKey<AdventureCheckpoints>(e => e.AdventureRef);
         }
 
     }

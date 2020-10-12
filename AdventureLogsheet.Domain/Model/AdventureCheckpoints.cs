@@ -11,7 +11,7 @@ namespace AdventureLogsheet.Domain.Model
         public int StartingACP { get; set; }
         public int EarnedACP { get; set; }
         public int TotalACP { get; set; }
-        public int AdventureId { get; set; }
-        public virtual Adventure Adventure { get; set; }
+        public int AdventureRef { get; set; }
+        public Adventure Adventure { get; set; }
     }
 }

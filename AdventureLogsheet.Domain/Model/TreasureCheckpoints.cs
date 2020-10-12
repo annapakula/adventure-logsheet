@@ -12,7 +12,7 @@ namespace AdventureLogsheet.Domain.Model
         public int EarnedTCP { get; set; }
         public int TotalTCP { get; set; }
         public int Tier { get; set; }
-        public int AdventureId { get; set; }
-        public virtual Adventure Adventure { get; set; }
+        public int AdventureRef { get; set; }
+        public Adventure Adventure { get; set; }
     }
 }
